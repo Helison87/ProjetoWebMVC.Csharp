@@ -21,5 +21,10 @@ namespace SalesWebMvc.Servicos
             return _Context.Vendedor.ToList();
         }
 
+        public void CriarVendedor(Vendedor v)
+        {
+            _Context.Add(v);
+            _Context.SaveChanges();
+        }
     }
 }
